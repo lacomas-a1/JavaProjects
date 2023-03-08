@@ -1,0 +1,46 @@
+Method Overloading in Java
+A Method Overloading in Java Programming Language is nothing but defining two or more methods with the same name in a class. Java allows us to assign the same name to multiple method definitions, as long as they hold a unique set of arguments or parameters and called Java method overloading.
+
+as long as they hold a unique set of arguments or parameters and called Java method overloading. This uniqueness helps the compiler to differentiate between one method and the other. So, it can call the appropriate methods based on the parameters.
+
+We have already seen many Java method overloading techniques, but you may not have noticed. For example, the Arrays.Sort function that we explained in our previous article or System.out.println function, which accepts multiple data types as a parameter. The Java method overloading can be achieved by
+Changing the Number of arguments. Please refer to example 1.
+They should be a change in the data type of at least one argument. Please refer to example 2, 3, and 4.
+Javac does not consider the following definitions as Java Method overloading perhaps it will throw an error:
+
+Changing the argument names. Please refer to example 6.
+Change the return type of a function. Please refer to example 7.
+
+Method Overloading Example 6
+In this Java method overloading program, we will show what happens when we change the argument names?. In order to do so, First, we created a Class, and within the class, we defined two functions with the same name, same arguments. However, we changed the argument names from a to x and b to y.
+
+
+public class Simple {
+	public void add(int a, int b) { 
+		System.out.format("The Output from First Method = %d \n", (a + b));
+	}	
+	public void add(int x, int y) { 
+		System.out.format("The Output from Second Method = %d \n", (a + b));
+	}
+}
+Stating that this is not Method overloading, and it cannot be encouraged.
+
+Method Overloading in Java 6
+In this program, we will show what happens when we change the return type of method overloading.
+
+In order to do so, First, we created a Class, and within the class, we defined two functions with the same name, same arguments, but we changed the return type to double.
+
+
+public class Simple {
+	public int add(int a, int b) { //function F1
+		int c = a + b;
+		return c;
+	}	
+	public double add(int a, int b) { //function F2
+		double c = a + b;
+		return c;
+	}
+}
+It is stating that this is not overloading, and it cannot be encouraged.
+
+Duplicate Method Name Error Message

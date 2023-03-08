@@ -1,0 +1,87 @@
+               
+               
+               Declaring Classes.
+class MyClass {
+// field, constructor, and
+// method declarations
+}
+This is a class declaration. The class body (the area between the braces) contains all the code
+that provides for the life cycle of the objects created from the class: constructors for initializinnew objects, declarations for the fields that provide the state of the class and its objects, and
+methods to implement the behavior of the class and its objects.
+The preceding class declaration is a minimal one. It contains only those components of a class
+declaration that are required. You can provide more information about the class, such as the
+name of its superclass, whether it implements any interfaces, and so on, at the start of the class
+declaration. For example,
+class MyClass extends MySuperClass implements YourInterface {
+// field, constructor, and
+// method declarations
+}
+means that MyClass is a subclass of MySuperClass and that it implements the YourInterface
+interface.
+            
+
+
+               Declaring Members Variables.
+There are several kinds of variables:
+
+ Member variables in a class—these are called fields.
+
+ Variables in a method or block of code—these are called local variables.
+
+ Variables in method declarations—these are called parameters.
+The Bicycle class uses the following lines of code to define its fields:
+public int gear;
+public int speed;
+Field declarations are composed of three components, in order:
+1.2.3.Zero or more modifiers, such as public or private.
+The field's type.
+The field's name.
+The fields of Bicycle are named cadence, gear, and speed and are all of data type integer
+(int). The public keyword identifies these fields as public members, accessible by any object
+that can access the class.
+           
+             
+                 Access modifiers
+ The first (left-most) modifier used lets you control what other classes have access to a member
+  field. For the moment, consider only public and private. Other access modifiers will be
+discussed later.
+                 
+                 
+                 public modifier—the field is accessible from all classes.
+                 private modifier—the field is accessible only within its own class.
+                 In the spirit of encapsulation, it is common to make fields private. This means that they can only
+                 be directly accessed from the Bicycle class. We still need access to these values, however. This
+                 can be done indirectly by adding public methods that obtain the field values for us:
+
+
+                 public class Bicycle {
+                    private int cadence;
+                    private int gear;
+                    private int speed;
+                    public Bicycle(int startCadence, int startSpeed, int startGear) {
+                    gear = startGear;
+                    cadence = startCadence;
+                    speed = startSpeed;
+                    }
+                    public int getCadence() {
+                    return cadence;
+                    }
+                    public void setCadence(int newValue) {
+                    cadence = newValue;
+                    }
+                    public int getGear() {
+                    return gear;
+                    }
+                    }
+                    }
+                    gear = newValue;
+                    public int getSpeed() {
+                    return speed;
+                    }
+                    public void applyBrake(int decrement) {
+                    speed -= decrement;
+                    }
+                    public void speedUp(int increment) {
+                    speed += increment;
+                    }
+
